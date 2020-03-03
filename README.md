@@ -81,6 +81,10 @@ $database.methods_collection:
 History Log
 =============
 
+- 1.0.1 -- 2020-03-03
+
+    - fix LightUserRowRestrictionService->handle fetch "select database" triggering error
+    
 - 1.0.0 -- 2020-03-03
 
     - initial commit

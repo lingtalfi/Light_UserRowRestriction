@@ -34,7 +34,6 @@ class LightUserRowRestrictionService implements LightDatabaseEventHandlerInterfa
     protected $container;
 
 
-
     /**
      * Builds the LightUserRowRestrictionService instance.
      */
@@ -43,7 +42,6 @@ class LightUserRowRestrictionService implements LightDatabaseEventHandlerInterfa
         $this->prefix2RowRestrictionsHandlers = [];
         $this->container = null;
     }
-
 
 
     /**
@@ -98,6 +96,16 @@ class LightUserRowRestrictionService implements LightDatabaseEventHandlerInterfa
             case "fetchAll.before":
                 $q = $args[0];
                 $tables = LightDatabaseHelper::getTablesByQuery($q);
+
+
+                /**
+                 * In some cases, the fetch method doesn't fetch in any table, this happens with the following statements:
+                 *
+                 * - select database()
+                 */
+                if (empty($tables)) {
+                    return;
+                }
                 /**
                  * For now assuming that the main table is the first one found.
                  */
