@@ -76,8 +76,16 @@ class LightUserRowRestrictionService implements LightDatabaseEventHandlerInterfa
     /**
      * @implementation
      */
-    public function handle(string $eventName, ...$args)
+    public function handle(string $eventName, bool $isSystemCall, ...$args)
     {
+        /**
+         * We don't treat system calls at all for now
+         */
+        if (true === $isSystemCall) {
+            return;
+        }
+
+
         switch ($eventName) {
             case "insert.before":
                 $type = "create";
@@ -97,15 +105,6 @@ class LightUserRowRestrictionService implements LightDatabaseEventHandlerInterfa
                 $q = $args[0];
                 $tables = LightDatabaseHelper::getTablesByQuery($q);
 
-
-                /**
-                 * In some cases, the fetch method doesn't fetch in any table, this happens with the following statements:
-                 *
-                 * - select database()
-                 */
-                if (empty($tables)) {
-                    return;
-                }
                 /**
                  * For now assuming that the main table is the first one found.
                  */

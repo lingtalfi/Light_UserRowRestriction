@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [LightUserRowRestrictionService::handle](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/doc/api/Ling/Light_UserRowRestriction/Service/LightUserRowRestrictionService/handle.md)(string $eventName, ?...$args) : void
+public [LightUserRowRestrictionService::handle](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/doc/api/Ling/Light_UserRowRestriction/Service/LightUserRowRestrictionService/handle.md)(string $eventName, bool $isSystemCall, ?...$args) : void
 
 
 
@@ -32,6 +32,8 @@ The eventName is one of:
 - fetch
 - fetchAll
 
+See the [SimplePdoWrapper conception notes](https://github.com/lingtalfi/SimplePdoWrapper/blob/master/doc/pages/conception-notes.md) for more details about the isSystemCall boolean argument.
+
 See the [LightDatabasePdoWrapper class](https://github.com/lingtalfi/Light_Database/blob/master/doc/api/Ling/Light_Database/LightDatabasePdoWrapper.md) methods for more details about the args.
 
 
@@ -42,6 +44,10 @@ Parameters
 
 
 - eventName
+
+    
+
+- isSystemCall
 
     
 
@@ -69,7 +75,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightUserRowRestrictionService::handle](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/Service/LightUserRowRestrictionService.php#L79-L137)
+See the source code for method [LightUserRowRestrictionService::handle](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/Service/LightUserRowRestrictionService.php#L79-L136)
 
 
 See Also
