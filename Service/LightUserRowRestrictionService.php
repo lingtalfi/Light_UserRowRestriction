@@ -132,7 +132,7 @@ class LightUserRowRestrictionService implements LightDatabaseEventHandlerInterfa
             $user = $manager->getUser();
 
             $handler = $this->prefix2RowRestrictionsHandlers[$prefix];
-            $handler->checkRestriction($user, $table, $type, $eventName, ...$args);
+            $handler->checkRestriction($user, $table, $type, ...$args);
         }
     }
 
