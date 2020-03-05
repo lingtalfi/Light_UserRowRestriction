@@ -4,7 +4,7 @@
 
 The LightUserRowRestrictionService class
 ================
-2020-03-03 --> 2020-03-03
+2020-03-03 --> 2020-03-05
 
 
 
@@ -24,7 +24,13 @@ Class synopsis
 
 class <span class="pl-k">LightUserRowRestrictionService</span> implements [LightDatabaseEventHandlerInterface](https://github.com/lingtalfi/Light_Database/blob/master/doc/api/Ling/Light_Database/EventHandler/LightDatabaseEventHandlerInterface.md) {
 
+- Constants
+    - public const [MODE_INACTIVE](#constant-MODE_INACTIVE) = 0 ;
+    - public const [MODE_STRICT](#constant-MODE_STRICT) = 1 ;
+    - public const [MODE_PERMISSIVE](#constant-MODE_PERMISSIVE) = 2 ;
+
 - Properties
+    - public static int [$mode](#property-mode) = 0 ;
     - protected [Ling\Light_UserRowRestriction\RowRestrictionHandler\RowRestrictionHandlerInterface[]](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/doc/api/Ling/Light_UserRowRestriction/RowRestrictionHandler/RowRestrictionHandlerInterface.md) [$prefix2RowRestrictionsHandlers](#property-prefix2RowRestrictionsHandlers) ;
     - protected [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) [$container](#property-container) ;
 
@@ -41,6 +47,13 @@ class <span class="pl-k">LightUserRowRestrictionService</span> implements [Light
 
 Properties
 =============
+
+- <span id="property-mode"><b>mode</b></span>
+
+    This property holds the mode for this instance.
+    See [the Light_UserRowRestriction conception notes](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/doc/pages/conception-notes.md) for more details.
+    
+    
 
 - <span id="property-prefix2RowRestrictionsHandlers"><b>prefix2RowRestrictionsHandlers</b></span>
 

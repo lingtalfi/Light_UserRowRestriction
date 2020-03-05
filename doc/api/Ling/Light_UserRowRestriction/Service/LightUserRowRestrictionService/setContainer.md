@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightUserRowRestrictionService::setContainer](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/Service/LightUserRowRestrictionService.php#L63-L66)
+See the source code for method [LightUserRowRestrictionService::setContainer](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/Service/LightUserRowRestrictionService.php#L88-L91)
 
 
 See Also

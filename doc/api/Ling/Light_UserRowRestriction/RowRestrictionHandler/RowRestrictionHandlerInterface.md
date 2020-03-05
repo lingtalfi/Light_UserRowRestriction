@@ -4,7 +4,7 @@
 
 The RowRestrictionHandlerInterface class
 ================
-2020-03-03 --> 2020-03-03
+2020-03-03 --> 2020-03-05
 
 
 

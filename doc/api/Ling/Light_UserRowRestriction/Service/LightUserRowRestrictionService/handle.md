@@ -75,7 +75,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightUserRowRestrictionService::handle](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/Service/LightUserRowRestrictionService.php#L79-L136)
+See the source code for method [LightUserRowRestrictionService::handle](https://github.com/lingtalfi/Light_UserRowRestriction/blob/master/Service/LightUserRowRestrictionService.php#L104-L165)
 
 
 See Also

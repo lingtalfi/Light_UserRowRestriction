@@ -19,6 +19,31 @@ class LightUserRowRestrictionService implements LightDatabaseEventHandlerInterfa
 {
 
     /**
+     * The inactive mode, which is the default mode. See the $mode property for more details.
+     */
+    const MODE_INACTIVE = 0;
+
+
+    /**
+     * The strict mode. See the $mode property for more details.
+     */
+    const MODE_STRICT = 1;
+
+    /**
+     * The permissive mode. See the $mode property for more details.
+     */
+    const MODE_PERMISSIVE = 2;
+
+
+    /**
+     * This property holds the mode for this instance.
+     * See @page(the Light_UserRowRestriction conception notes, service mode section) for more details.
+     * @var int = 0
+     */
+    public static $mode = self::MODE_INACTIVE;
+
+
+    /**
      * This property holds the $prefix2RowRestrictionsHandlers for this instance.
      * An array of table prefix => RowRestrictionHandlerInterface.
      * Only one handler is allowed by prefix for now (let plugins figure that out).
@@ -82,6 +107,10 @@ class LightUserRowRestrictionService implements LightDatabaseEventHandlerInterfa
          * We don't treat system calls at all for now
          */
         if (true === $isSystemCall) {
+            return;
+        }
+
+        if (self::MODE_INACTIVE === self::$mode) {
             return;
         }
 

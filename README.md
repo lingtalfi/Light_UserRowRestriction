@@ -1,6 +1,6 @@
 Light_UserRowRestriction
 ===========
-2020-03-03
+2020-03-03 -> 2020-03-05
 
 
 
@@ -81,6 +81,10 @@ $database.methods_collection:
 History Log
 =============
 
+- 1.2.0 -- 2020-03-05
+
+    - add LightUserRowRestrictionService::$mode property 
+    
 - 1.1.0 -- 2020-03-03
 
     - update plugin to adapt new Light_Database implementation with system call flags 
