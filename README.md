@@ -73,6 +73,10 @@ Related
 History Log
 =============
 
+- 1.3.3 -- 2021-02-19
+
+    - upgrade dependencies
+
 - 1.3.2 -- 2020-12-08
 
     - Fix lpi-deps not using natsort.
