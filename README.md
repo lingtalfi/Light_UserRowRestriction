@@ -78,6 +78,10 @@ Related
 History Log
 =============
 
+- 1.3.7 -- 2021-05-11
+
+    - Update deps (by CommitWizard).
+
 - 1.3.6 -- 2021-05-10
 
     - Fix assets missing.
